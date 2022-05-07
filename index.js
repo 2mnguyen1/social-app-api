@@ -19,8 +19,12 @@ app.use(express.json())
 app.use(helmet())
 app.use(morgan("common"))
 
-app.use("/api/user", userRoute)
+app.use("/api/users", userRoute)
 app.use("/api/auth", authRoute)
+app.get('/', (req, res) => {
+    res.send("Hello World!")
+})
+
 
 app.listen(3000, () => {
     console.log("3000 PORT")
