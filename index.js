@@ -27,7 +27,7 @@ app.get('/', (req, res) => {
 })
 
 
-app.listen(3000, () => {
-    console.log("3000 PORT")
+app.listen(8800, () => {
+    console.log("8800 PORT")
 })
 
