@@ -1,9 +1,9 @@
 const router = require('express').Router()
 const Post = require('../models/Post')
 const User = require('../models/User')
-// create a post
 
-router.post('/posting', async (req, res, next) => {
+// create a post
+router.post('/posting', async (req, res) => {
     try {
         const newPost = await new Post(req.body)
         const saved = await newPost.save()
